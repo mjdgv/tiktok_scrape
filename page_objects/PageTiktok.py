@@ -206,25 +206,7 @@ class PageTiktok(BaseCase): #inherit BaseCase
         validates that the the oldbatch and the new batch (videolists) does not overlap
         '''
         return (not(set(oldbatch) & set(newbatch)))
-    
-
-    def iterate_through_batches_by_hashtag(self, num_batches = 5):
-        """
-        Like posts in current batch after updating, then move on to the next batch
-        """
-        self.batch_num = 0
-        while num_batches > 0:  # if new batch appeared on foryou page
-            print(f"\n****ENTERING BATCH{6-num_batches}\n")
-            num_batches -= 1
-            self.batch_num += 1
-            time.sleep(5)
-            current_batch_info = self.info_videos(self.current_batch)
-            self.write_to_csv(current_batch_info, "like_by_hashtag_data_all_videos.csv")  # all videos on page 
-            #self.write_to_csv(liked_videos, "like_by_hashtag_data_liked_videos.csv") #only the ones that were liked by hashtag
-            print(f"\nThere are #{len(current_batch_info)} videos \n")
-            self.update_batch()
-            
-        
+                
     def iterate_through_batches_random(self, batches=5):
         """
         Like posts in current batch after updating randomly, then move on to the next batch
