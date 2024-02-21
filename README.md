@@ -66,9 +66,9 @@ Now you should be able to run the code. The source code is located in `page_obje
 
 This will run tests we specified in `tests/` and should export data from an instance where the algorithm
 
-a. Doesn't interact with videos at all. 
+a. Doesn't interact with videos at all, just collects information.
 
-b. Watches videos if they're part of a pre-decided list of hashtags.
+In order to chnage the language, line 
 
 Any output from the tests, as well as any information about failures, will be located in a file generated called `report.html`, located in the home directory of the repository. This is what the `--html=report.html` flag indicates when we run pytest.
 
