@@ -207,7 +207,7 @@ class PageTiktok(BaseCase): #inherit BaseCase
         '''
         return (not(set(oldbatch) & set(newbatch)))
                 
-    def iterate_through_batches_random(self, batches=5):
+    def iterate_through_batches(self, batches=5):
         """
         Like posts in current batch after updating randomly, then move on to the next batch
         """
