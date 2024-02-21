@@ -2,12 +2,12 @@ from page_objects.PageTiktok import PageTiktok
 import time
 
 class TiktokAudit(PageTiktok):
-    def test_like_hashtag(self):
+    def test_random(self):
         self.fetch_tiktok(1)
-        self.iterate_through_batches_by_hashtag()
+        self.iterate_through_batches_random()
         time.sleep(10)
 
-    def test_like_random(self):
+    def test_random2(self):
         self.fetch_tiktok(1)
         self.iterate_through_batches_random()
         time.sleep(10)
