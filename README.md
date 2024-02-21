@@ -68,7 +68,10 @@ This will run tests we specified in `tests/` and should export data from an inst
 
 a. Doesn't interact with videos at all, just collects information.
 
-In order to chnage the language, line 
+In order to chnage the language, line 6 and 11 in the test folder (file pytest) have to be modified. The only change that must be made is to the number within the fetch_tiktok(num) function. We currently have 6 languages to choose from: 0 - English, 1- Spanish, 2 - French, 3 - German, 4 - Arabic and 5 - Hindi. If you wanted to conduct our experiment with French as the default Tiktok language, then you the fetch_tiktok function would look as follows: 
+```
+fetch_tiktok(2)
+```
 
 Any output from the tests, as well as any information about failures, will be located in a file generated called `report.html`, located in the home directory of the repository. This is what the `--html=report.html` flag indicates when we run pytest.
 
@@ -98,8 +101,6 @@ When the code starts running, it will bring up a pop up window where Tiktok is o
 If you're on Windows, you may have an issue with the execution policies allowed for scripts on the machine. To bypass this, we used this command in an administrator terminal:
 
     Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-
-If the issue persists, talk to Miles.
 
 On Mac/Linux, you may have to run `sudo source .venv/bin/activate`, though it shouldn't be a problem.
 
