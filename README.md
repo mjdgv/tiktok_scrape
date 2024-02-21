@@ -68,7 +68,7 @@ This will run tests we specified in `tests/` and should export data from an inst
 
 a. Doesn't interact with videos at all, just collects information.
 
-In order to chnage the language, line 6 and 11 in the test folder (file pytest) have to be modified. The only change that must be made is to the number within the fetch_tiktok(num) function. We currently have 6 languages to choose from: 0 - English, 1- Spanish, 2 - French, 3 - German, 4 - Arabic and 5 - Hindi. If you wanted to conduct our experiment with French as the default Tiktok language, then you the fetch_tiktok function would look as follows: 
+In order to chnage the language, line 6 and 11 in the test folder (file pytest) have to be modified. The only change that must be made is to the number within the fetch_tiktok(num) function. We currently have 6 languages to choose from: 0 - English, 1- Spanish, 2 - French, 3 - German, 4 - Arabic and 5 - Hindi. If you wanted to conduct our experiment with French as the default Tiktok language, then the fetch_tiktok function would look as follows: 
 ```
 fetch_tiktok(2)
 ```
@@ -111,11 +111,10 @@ On Mac/Linux, you may have to run `sudo source .venv/bin/activate`, though it sh
 
 
 ## Things to Notice:
-1. You can commment/uncomment the output csv code two iterate_through functions.
-2. If the requirements does not work, pip install packages mentioned in the import
-3. pytest contains both tendency liking/random liking test codes
-4. You will have to **manually input** your account. Afterwards you can hold on to it and wait until the page start moving. If the terminal shows that it is still running, do not touch your tiktok webpage until your pytest pass/fail(feel free to look at other stuff while waiting)
-5. report.html has to be opened in the browser to see the cleaned version
+1. If the requirements does not work, pip install packages mentioned in the import
+2. pytest contains both tendency liking/random liking test codes
+3. You will have to **manually input** your account. Afterwards you can hold on to it and wait until the page start moving. If the terminal shows that it is still running, do not touch your tiktok webpage until your pytest pass/fail(feel free to look at other stuff while waiting)
+4. report.html has to be opened in the browser to see the cleaned version
 
 Currently, the code successfully identifies posts with **predefined hashtags** (scenario 1), and scrolls to the next batch if it's done with the current batch. 
 
